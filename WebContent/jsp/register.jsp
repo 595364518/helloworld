@@ -56,6 +56,7 @@
                         $("#email").text("");
                         return;
 					}
+					document.getElementById("error5").innerHTML="";
                     checkNull();
                 },
 				error:function(d){
