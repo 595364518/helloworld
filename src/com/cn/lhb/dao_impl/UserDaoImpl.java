@@ -50,7 +50,7 @@ public class UserDaoImpl implements IUserDao {
 	@Override
 	public Emails checkEmails(String email) throws SQLException {
 	 	QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
-	 	String sql = "select * from emails where emails = ?";
+	 	String sql = "select * from user where email = ?";
 		return qr.query(sql,new BeanHandler<>(Emails.class),email);
 	}
 }

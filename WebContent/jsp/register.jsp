@@ -125,7 +125,7 @@
 							})
 		            	}else{
 		            		var $username = $("#username").val();
-		            		var $email = $("#email").text();
+		            		var $email = $("#email").val();
 		    				var url = "/small_tiger/sendEmail";
 		    				$.ajax({
 		    					url:url,

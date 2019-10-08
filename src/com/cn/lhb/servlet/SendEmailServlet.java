@@ -33,13 +33,14 @@ public class SendEmailServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String username = request.getParameter("username");
+		System.out.println("邮箱地址:"+email);
 		Random rand = new Random();
 		int checkCode = CodeUtils.getCode();
 		String content=null;
 		content+="<div style='background:#f7f7f7;overflow:hidden'>";
 		content+="<div style='background:#fff;border:1px solid #ccc;margin:2%;padding:0 30px'>";
 		content+="<div style='line-height:40px;height:40px'>&nbsp;</div>";
-		content+="<p style='margin:0;padding:0;font-size:14px;line-height:30px;color:#333;font-family:arial,sans-serif;font-weight:bold'>亲爱的用户 <b style='font-size:18px;color:#f90'></b>：</p>";
+		content+="<p style='margin:0;padding:0;font-size:14px;line-height:30px;color:#333;font-family:arial,sans-serif;font-weight:bold'>亲爱的用户 <b style='font-size:18px;color:#f90'></b>：</p>"+username;
 		content+="<div style='line-height:20px;height:20px'>&nbsp;</div>";
 		content+="<p style='margin:0;padding:0;line-height:30px;font-size:14px;color:#333;font-family:'宋体',arial,sans-serif'>您好！感谢您使用该服务，您正在进行邮箱验证，本次请求的验证码为：</p>";
 		content+="<p style='margin:0;padding:0;line-height:30px;font-size:14px;color:#333;font-family:'宋体',arial,sans-serif'>";
